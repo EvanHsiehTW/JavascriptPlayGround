@@ -1,0 +1,32 @@
+A1 = [2, 1, 8, 9, 67, 33, 12, 565, 33, 22, 1, 45, 67];
+
+result = [];
+
+for (i = 0; i < A1.length;) {
+
+    var a = A1[i]
+
+    var temp = 0;
+    for (j = i + 1; j < A1.length; j++) {
+
+        if (a <= A1[j]) {
+
+            continue;
+        }
+        else {
+            temp = j
+            a = A1[j]
+
+            continue;
+        }
+
+    }
+
+    result.push(a);
+    A1.splice(temp, 1);
+
+
+
+}
+
+console.log(result);
